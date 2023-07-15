@@ -33,4 +33,8 @@ export const Tab = styled.li<TabProps>`
           color: ${({ theme }) => theme.colors.gray[400]};
           font-weight: 400;
         `};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.gray[200]};
+  }
 `

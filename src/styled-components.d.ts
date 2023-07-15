@@ -15,6 +15,9 @@ declare module "styled-components" {
         800: string
       }
     }
+    shadows: {
+      100: string
+    }
     fonts: {
       primary: string
       secondary: string

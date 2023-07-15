@@ -5,17 +5,17 @@ import { TabItem } from "./types"
 const initialState: TabItem[] = [
   {
     id: "all",
-    name: "Todos os Produtos",
+    name: "All Products",
     isActive: true,
   },
   {
     id: "t-shirts",
-    name: "Camisetas",
+    name: "T-Shirts",
     isActive: false,
   },
   {
     id: "mugs",
-    name: "Canecas",
+    name: "Mugs",
     isActive: false,
   },
 ]

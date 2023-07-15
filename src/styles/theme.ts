@@ -14,6 +14,9 @@ export const theme: DefaultTheme = {
       800: "#F3F3F6",
     },
   },
+  shadows: {
+    100: "0px 4px 12px 0px rgba(0, 0, 0, 0.10)",
+  },
   transition: "all 150ms ease-in-out",
   fonts: {
     primary: "Saira, sans-serif",

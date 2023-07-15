@@ -12,12 +12,16 @@ export const Input = styled.input`
   background-color: ${({ theme }) => theme.colors.gray[800]};
   border-radius: 0.5rem;
   border: 1px solid transparent;
-  color: ${({ theme }) => theme.colors.gray[400]};
+  color: ${({ theme }) => theme.colors.gray[200]};
   flex: 1 1 auto;
   font: 400 0.875rem/1 ${({ theme }) => theme.fonts.primary};
   outline: none;
   padding: 0 1rem;
   transition: ${({ theme }) => theme.transition};
+
+  &::placeholder {
+    color: ${({ theme }) => theme.colors.gray[400]};
+  }
 
   &:hover,
   &:focus {
