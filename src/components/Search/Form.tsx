@@ -16,7 +16,7 @@ export const Form: FC<FormProps> = ({
   <Styled.Form onSubmit={handleSubmit}>
     <Styled.Input
       type="text"
-      placeholder="Procurando por algo específico?"
+      placeholder="Looking for something?"
       value={inputValue}
       onChange={({ currentTarget }) => {
         handleChange(currentTarget.value)

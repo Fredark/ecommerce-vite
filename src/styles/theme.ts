@@ -5,6 +5,7 @@ export const theme: DefaultTheme = {
     black: "#000",
     white: "#FFF",
     red: "#DE3838",
+    orange: "#FFA585",
     gray: {
       200: "#41414D",
       300: "#5D5D6D",
