@@ -3,6 +3,15 @@ import { Outlet } from "react-router-dom"
 import { Header } from "../../components/Header"
 import { Search } from "../../components/Search"
 import { Cart } from "../../components/Cart"
+import styled from "styled-components"
+import { Center } from "../../styles/utils"
+
+const Main = styled(Center).attrs({
+  as: "main",
+})`
+  padding-bottom: 1.56rem;
+  padding-top: 1.56rem;
+`
 
 export const StoreTemplate: FC = () => (
   <>
@@ -10,8 +19,8 @@ export const StoreTemplate: FC = () => (
       <Search />
       <Cart />
     </Header>
-    <main>
+    <Main>
       <Outlet />
-    </main>
+    </Main>
   </>
 )
