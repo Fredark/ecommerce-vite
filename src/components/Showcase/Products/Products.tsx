@@ -15,7 +15,7 @@ export const Products: FC = () => {
         <Styled.Product key={index}>
           <Styled.ProductLink to="/product">
             <Styled.ProductImageEnv>
-              <Styled.ProductImage src={image_url} alt={name} />
+              <Styled.ProductImage src={image_url} alt={name} loading="lazy" />
             </Styled.ProductImageEnv>
             <Styled.ProductDetails>
               <Styled.ProductName>{name}</Styled.ProductName>

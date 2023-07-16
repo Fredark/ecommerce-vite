@@ -1,4 +1,4 @@
-import { type FC, type ReactNode, createContext, useContext } from "react"
+import { type FC, type ReactNode, createContext } from "react"
 import type { QueryAllProductsArgs } from "../__generated__/graphql"
 import { type ShowcaseHook, useShowcase } from "../hooks/useShowcase"
 

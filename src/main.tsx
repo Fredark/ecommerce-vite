@@ -10,7 +10,7 @@ import { HelmetProvider } from "react-helmet-async"
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client"
 
 const apolloClient = new ApolloClient({
-  uri: "http://localhost:3333/",
+  uri: import.meta.env.VITE_API_URI,
   cache: new InMemoryCache(),
 })
 
