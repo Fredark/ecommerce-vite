@@ -2,6 +2,8 @@ import type { FC } from "react"
 import { Filter } from "../../components/Showcase/Filter/Filter"
 import { Pagination } from "../../components/Showcase/Pagination"
 import { Helmet } from "react-helmet-async"
+import { Products } from "../../components/Showcase/Products"
+import { ShowcaseProvider } from "../../contexts/showcaseContext"
 
 export const HomePage: FC = () => {
   return (
@@ -13,8 +15,12 @@ export const HomePage: FC = () => {
           content="This is an e-commerce example project"
         />
       </Helmet>
-      <Filter />
-      <Pagination />
+      <ShowcaseProvider>
+        <Filter />
+        <Pagination />
+        <Products />
+        <Pagination />
+      </ShowcaseProvider>
     </>
   )
 }

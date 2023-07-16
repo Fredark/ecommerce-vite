@@ -4,4 +4,6 @@ export interface SortByItem {
   id: SortByItemId
   name: string
   isActive: boolean
+  sortField: string
+  sortOrder: string
 }

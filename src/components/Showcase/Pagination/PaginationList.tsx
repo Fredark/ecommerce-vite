@@ -25,7 +25,7 @@ export const PaginationList: FC<PaginationListProps> = ({
           isActive={item === activePage}
           handlePaginationButtonClick={handlePaginationButtonClick}
         >
-          {item}
+          {item + 1}
         </PaginationButton>
       ))}
     </Styled.PagesList>
@@ -34,7 +34,7 @@ export const PaginationList: FC<PaginationListProps> = ({
         key="previous"
         target={activePage - 1}
         handlePaginationButtonClick={handlePaginationButtonClick}
-        isDisabled={activePage === 1}
+        isDisabled={activePage === 0}
       >
         <PaginationPreviousIcon />
       </PaginationButton>
@@ -42,7 +42,7 @@ export const PaginationList: FC<PaginationListProps> = ({
         key="next"
         target={activePage + 1}
         handlePaginationButtonClick={handlePaginationButtonClick}
-        isDisabled={activePage >= pagesList.length}
+        isDisabled={activePage >= pagesList.length - 1}
       >
         <PaginationNextIcon />
       </PaginationButton>

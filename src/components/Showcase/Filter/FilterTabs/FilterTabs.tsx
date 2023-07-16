@@ -1,6 +1,8 @@
-import { useState, type FC } from "react"
+import { useState, type FC, useContext } from "react"
 import { FilterTabsList } from "./FilterTabsList"
 import { TabItem } from "./types"
+import { ShowcaseContext } from "../../../../contexts/showcaseContext"
+import { QueryAllProductsArgs } from "../../../../__generated__/graphql"
 
 const initialState: TabItem[] = [
   {
@@ -21,9 +23,15 @@ const initialState: TabItem[] = [
 ]
 
 export const FilterTabs: FC = () => {
+  const { setFilters } = useContext(ShowcaseContext)
   const [filtersList, setFiltersList] = useState<TabItem[]>(initialState)
 
   const handleTabChange = (tabId: string) => {
+    const filter: QueryAllProductsArgs = {
+      filter: {
+        category: tabId === "all" ? undefined : tabId,
+      },
+    }
     const newList: TabItem[] = filtersList.map(({ id, ...rest }) => {
       return {
         ...rest,
@@ -33,6 +41,7 @@ export const FilterTabs: FC = () => {
     })
 
     setFiltersList(newList)
+    setFilters(filter)
   }
 
   return (

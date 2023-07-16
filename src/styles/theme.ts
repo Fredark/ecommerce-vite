@@ -7,9 +7,11 @@ export const theme: DefaultTheme = {
     red: "#DE3838",
     orange: "#FFA585",
     gray: {
+      100: "#09090A",
       200: "#41414D",
       300: "#5D5D6D",
       400: "#737380",
+      500: "#DCE2E5",
       600: "#E9E9F0",
       700: "#F0F0F5",
       800: "#F3F3F6",

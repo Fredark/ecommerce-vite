@@ -8,6 +8,7 @@ export const Container = styled.div`
   align-self: flex-end;
   display: flex;
   gap: 0.5rem;
+  margin-bottom: 2rem;
 `
 
 export const PagesList = styled.div`
@@ -34,7 +35,7 @@ export const Button = styled.button<ButtonProps>`
           background-color: ${({ theme }) => theme.colors.gray[900]};
           border: 1px solid ${({ theme }) => theme.colors.orange};
           font-weight: 600;
-          color: red;
+          color: ${({ theme }) => theme.colors.orange};
         `
       : css`
           background-color: ${({ theme }) => theme.colors.gray[600]};

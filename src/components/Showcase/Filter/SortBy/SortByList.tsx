@@ -8,7 +8,7 @@ interface SortByListProps {
   isListOpen: boolean
   activeSortLabel: string
   handleSortByClick: () => void
-  handleSortByItemClick: (sortId: string) => void
+  handleSortByItemClick: (sortItem: SortByItem) => void
 }
 
 export const SortByList: FC<SortByListProps> = ({
@@ -27,14 +27,14 @@ export const SortByList: FC<SortByListProps> = ({
     <SortByIcon />
     {sortByList.length > 0 ? (
       <Styled.List $isOpen={isListOpen}>
-        {sortByList.map(({ id, name }) => (
+        {sortByList.map((item) => (
           <Styled.Item
-            key={id}
+            key={item.id}
             onClick={() => {
-              handleSortByItemClick(id)
+              handleSortByItemClick(item)
             }}
           >
-            {name}
+            {item.name}
           </Styled.Item>
         ))}
       </Styled.List>
