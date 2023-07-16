@@ -1,5 +1,5 @@
 import { useState, type FC } from "react"
-import { List } from "./List"
+import { FilterTabsList } from "./FilterTabsList"
 import { TabItem } from "./types"
 
 const initialState: TabItem[] = [
@@ -35,5 +35,7 @@ export const FilterTabs: FC = () => {
     setFiltersList(newList)
   }
 
-  return <List tabsList={filtersList} handleTabChange={handleTabChange} />
+  return (
+    <FilterTabsList tabsList={filtersList} handleTabChange={handleTabChange} />
+  )
 }

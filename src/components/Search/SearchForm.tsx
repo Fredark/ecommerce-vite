@@ -1,6 +1,6 @@
 import type { FC, FormEvent } from "react"
 import * as Styled from "./styles"
-import { Icon } from "./Icon"
+import { Icon } from "./SearchIcon"
 
 interface FormProps {
   inputValue: string

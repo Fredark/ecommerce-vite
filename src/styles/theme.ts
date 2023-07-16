@@ -10,8 +10,10 @@ export const theme: DefaultTheme = {
       200: "#41414D",
       300: "#5D5D6D",
       400: "#737380",
+      600: "#E9E9F0",
       700: "#F0F0F5",
       800: "#F3F3F6",
+      900: "#F5F5FA",
     },
   },
   shadows: {

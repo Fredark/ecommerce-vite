@@ -7,7 +7,10 @@ interface FilterTabsProps {
   handleTabChange: (tabId: string) => void
 }
 
-export const List: FC<FilterTabsProps> = ({ tabsList, handleTabChange }) => (
+export const FilterTabsList: FC<FilterTabsProps> = ({
+  tabsList,
+  handleTabChange,
+}) => (
   <>
     {tabsList.length > 0 ? (
       <Styled.List role="tablist">

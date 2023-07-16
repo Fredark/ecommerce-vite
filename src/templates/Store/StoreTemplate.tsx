@@ -9,6 +9,7 @@ import { Center } from "../../styles/utils"
 const Main = styled(Center).attrs({
   as: "main",
 })`
+  flex-flow: column nowrap;
   padding-bottom: 1.56rem;
   padding-top: 1.56rem;
 `

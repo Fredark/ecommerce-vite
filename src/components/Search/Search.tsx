@@ -1,5 +1,5 @@
 import { useState, type FC, type FormEvent } from "react"
-import { Form } from "./Form"
+import { Form } from "./SearchForm"
 
 export const Search: FC = () => {
   const [searchTerm, setSearchTerm] = useState("")

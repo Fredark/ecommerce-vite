@@ -1,7 +1,7 @@
 import { FC } from "react"
 import * as Styled from "./styles"
 import { SortByItem } from "./types"
-import { Icon } from "./Icon"
+import { SortByIcon } from "./SortByIcon"
 
 interface SortByListProps {
   sortByList: SortByItem[]
@@ -24,7 +24,7 @@ export const SortByList: FC<SortByListProps> = ({
     }}
   >
     Sort by: <Styled.SelectedLabel>{activeSortLabel}</Styled.SelectedLabel>
-    <Icon />
+    <SortByIcon />
     {sortByList.length > 0 ? (
       <Styled.List $isOpen={isListOpen}>
         {sortByList.map(({ id, name }) => (
