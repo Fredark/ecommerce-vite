@@ -1,6 +1,7 @@
 import { useQuery } from "@apollo/client"
 import { gql } from "../__generated__"
 import { GetProductQuery, Product } from "../__generated__/graphql"
+import { useEffect, useState } from "react"
 
 interface UseProductProps {
   productId: string | undefined
@@ -24,11 +25,18 @@ const GET_PRODUCT = gql(`
 `)
 
 export const useProduct = ({ productId }: UseProductProps): UseProductHook => {
+  const [product, setProduct] = useState<Product>()
   const { data } = useQuery<GetProductQuery>(GET_PRODUCT, {
     variables: { productId },
     skip: productId === "",
   })
+
+  useEffect(() => {
+    if (data === undefined || data === null) return
+
+    setProduct(data.Product as Product)
+  }, [data])
   return {
-    productData: data?.Product,
+    productData: product,
   }
 }
