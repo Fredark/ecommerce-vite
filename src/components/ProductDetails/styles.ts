@@ -30,7 +30,7 @@ export const ProductDetails = styled.div`
 
 export const ProductImageEnv = styled.div`
   border-radius: 0.25rem;
-  flex: 1 1 40rem;
+  flex: 1 1 30rem;
   font-size: 0;
   line-height: 0;
   overflow: hidden;
@@ -43,7 +43,7 @@ export const ProductImage = styled.img`
 export const ProductInfo = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  flex: 1 1 28rem;
+  flex: 1 1 21rem;
 `
 
 export const ProductCategory = styled.h2`
@@ -81,7 +81,7 @@ export const ProductShipping = styled.p`
 
 export const ProductDescriptionEnv = styled.div`
   flex: 1 1 auto;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 `
 
 export const ProductDescriptionTitle = styled.h2`
